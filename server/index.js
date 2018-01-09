@@ -1,7 +1,14 @@
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
+
+app.disable('x-powered-by');
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(
   '/static/css',
@@ -11,7 +18,12 @@ app.use(
   '/static/js',
   express.static(path.resolve(__dirname, '../build/static/js'))
 );
-app.use('/', (req, res) => {
+
+/**
+ * Other server router for REST API
+ */
+
+app.use('*', (req, res) => {
   fs.readFile(
     path.resolve(__dirname, '../build/index.html'),
     'utf8',

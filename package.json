@@ -3,20 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
+    "moment": "^2.20.1",
     "node-sass-chokidar": "^0.0.3",
+    "nodemon": "^1.14.9",
+    "ramda": "^0.25.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "^1.0.17"
   },
   "scripts": {
-    "server": "yarn build && node ./server/index.js",
-    "start": "react-scripts start",
+    "server": "nodemon server",
+    "dev": "react-scripts start",
+    "start": "npm run build && node ./server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "watch-css":
+      "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   }
 }
