@@ -1,9 +1,5 @@
-#root {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .App {
-    flex: 0 1 auto;
-  }
+@import url(//fonts.googleapis.com/earlyaccess/notosanskannada.css);
+
+body {
+  font-family: 'Noto Sans Kannada', sans-serif;
 }
