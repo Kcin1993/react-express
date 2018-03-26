@@ -24,7 +24,7 @@
   "scripts": {
     "server": "nodemon server",
     "dev": "react-scripts start",
-    "heroku-prebuild": "npm run build",
+    "heroku-prebuild": "npm install && npm run build",
     "start": "node ./server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
