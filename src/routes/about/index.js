@@ -1,7 +1,5 @@
-import React from 'react';
+import React from "react";
 
-const About = () => (
-  <div>About router</div>
-);
+const About = () => <div>About Page</div>;
 
 export default About;
